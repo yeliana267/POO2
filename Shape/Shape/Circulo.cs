@@ -9,10 +9,14 @@ namespace Shape
     internal class Circulo: Figura
     {
         public double radio;
-        public Circulo(double Alto, double Ancho, double radio): base(Alto, Ancho)
+        public Circulo(double Alto, double Ancho, double Radio): base(Alto, Ancho)
         {
 
-            radio = Alto + Ancho;
+            Radio = Alto + Ancho;
+        }
+        public override double CalculateSurface()
+        {
+            return Math.PI * Math.Pow(radio, 2);
         }
     }
 }

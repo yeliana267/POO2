@@ -7,7 +7,7 @@ namespace Shape
         {
             Figura triangulo = new Triangulo(5.2, 7.6);
             Figura rectangulo = new Rectangulo(6.9, 3.1);
-            Figura circulo = new Circulo(8, 3);
+            Figura circulo = new Circulo(8, 3,9);
             Figura[] figurasDiferentes = new Figura[3];
 
             figurasDiferentes[0] = triangulo;
@@ -18,7 +18,7 @@ namespace Shape
 
             for (int i = 0; i < 3; i++)
             {
-                FigurasAreas[i] = FigurasDiferentes[i].CalculateSurface();
+                FigurasAreas[i] = figurasDiferentes[i].CalculateSurface();
                 Console.WriteLine("Se añadio el valor: " + i);
             }
 
