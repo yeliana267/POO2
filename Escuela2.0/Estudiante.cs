@@ -11,7 +11,7 @@ namespace Escuela2._0
         private int Id { get; set; }
         public Estudiante(string nombre, string apellido, DateOnly fecha, int id)
            : base(nombre, apellido, fecha)
-        { }
+        { Id = id; }
         public int id
         {
             get
