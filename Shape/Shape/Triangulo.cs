@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Shape
 {
-    internal class Rectangulo : Figura
+    internal class Triangulo : Figura
     {
-        public Rectangulo(double Alto, double Ancho) : base(Alto, Ancho)
+        public Triangulo(double Alto, double Ancho) : base(Alto, Ancho)
         {
 
             Ancho = ancho;
@@ -16,7 +16,7 @@ namespace Shape
         }
         public override double CalculateSurface()
         {
-            return ancho * alto;
+            return alto * ancho / 2;
         }
     }
 }
