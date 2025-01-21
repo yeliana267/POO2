@@ -12,7 +12,7 @@ namespace Shape
         public Circulo(double Alto, double Ancho, double Radio): base(Alto, Ancho)
         {
 
-            Radio = Alto + Ancho;
+            radio = Radio;
         }
         public override double CalculateSurface()
         {
