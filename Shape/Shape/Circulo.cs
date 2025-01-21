@@ -8,10 +8,11 @@ namespace Shape
 {
     internal class Circulo: Figura
     {
-        public Circulo(double Alto, double Ancho): base(Alto, Ancho)
+        public double radio;
+        public Circulo(double Alto, double Ancho, double radio): base(Alto, Ancho)
         {
 
-            _radio = Alto + Ancho;
+            radio = Alto + Ancho;
         }
     }
 }
