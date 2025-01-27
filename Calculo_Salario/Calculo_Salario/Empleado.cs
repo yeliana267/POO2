@@ -11,8 +11,10 @@ namespace Calculo_Salario
         public string nombre { get; set; }
         public string apellidos { get; set; }
         private string seguroSocial { get; set; }
+        public decimal sueldoBase { get; set; } 
 
-        public Empleado(string Nombre, string Apellidos, string SeguroSocial) {
+        public Empleado(string Nombre, string Apellidos, string SeguroSocial)
+        {
 
             this.nombre = Nombre;
             this.apellidos = Apellidos;
@@ -26,7 +28,7 @@ namespace Calculo_Salario
             set
             { SeguroSocial = value; }
         }
-        public abstract decimal CalcularSueldo(bool metas);
+        public abstract decimal CalcularSueldo(bool metas, decimal SueldoBase);
 
 
 

@@ -12,7 +12,7 @@ namespace Calculo_Salario
 
             Empleado_Admin administrativo = new Empleado_Admin("Carlos", "Lopez", "SS11223");
 
-            Console.WriteLine("Salario Docente Fijo con metas alcanzadas: " + docenteFijo.nombre + " " + docenteFijo.apellidos + " " + docenteFijo.SeguroSocial + " " + docenteFijo.CalcularSueldo(true));
+            Console.WriteLine("Salario Docente Fijo con metas alcanzadas: " + docenteFijo.nombre + " " + docenteFijo.apellidos + " " + docenteFijo.SeguroSocial + " " + docenteFijo.CalcularSueldo(true, 45000));
             Console.WriteLine($"{yeliana.nombre} { yeliana.apellidos} de seguro social: {yeliana.SeguroSocial} a ganado {yeliana.CalcularSueldo(true)}");
 
 

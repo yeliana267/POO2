@@ -8,11 +8,10 @@ namespace Calculo_Salario
 {
     internal class Empleado_Admin : Empleado    
     {
-        public decimal SueldoBase = 30000;
         public Empleado_Admin(string Nombre, string Apellidos, string SeguroSocial) : base(Nombre, Apellidos, SeguroSocial)
         {
         }
-        public override decimal CalcularSueldo(bool metas)
+        public override decimal CalcularSueldo(bool metas,decimal SueldoBase)
         {
             if (metas == true)
             {
