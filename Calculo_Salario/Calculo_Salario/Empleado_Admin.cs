@@ -6,22 +6,25 @@ using System.Threading.Tasks;
 
 namespace Calculo_Salario
 {
-    internal class Empleado_Admin : Empleado  
+    internal class Empleado_Admin : Empleado
     {
-        public Empleado_Admin(string Nombre, string Apellidos, string SeguroSocial) : base(Nombre, Apellidos, SeguroSocial)
+        public decimal sueldoBase = 35000;
+        public bool metas { get; set; }
+        public Empleado_Admin(string Nombre, string Apellidos, string SeguroSocial, bool Metas) : base(Nombre, Apellidos, SeguroSocial)
         {
+            this.metas = Metas;
         }
-        public override decimal CalcularSueldo(bool metas,decimal SueldoBase)
+        public override decimal CalcularSueldo()
         {
-            if (metas == true)
+            if (metas)
             {
 
-                decimal bono = SueldoBase * 5 / 100;
-                decimal Sueldo = SueldoBase + bono;
+                decimal bono = sueldoBase * 5 / 100;
+                decimal Sueldo = sueldoBase + bono;
                 return Sueldo;
             }
-            else { return SueldoBase / 2; }
+            else { return sueldoBase / 2; }
         }
     }
-    }
+}
 

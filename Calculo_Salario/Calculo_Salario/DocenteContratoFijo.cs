@@ -8,19 +8,23 @@ namespace Calculo_Salario
 {
     internal class DocenteContratoFijo : Empleado
     {
-
-        public DocenteContratoFijo(string Nombre, string Apellidos, string SeguroSocial) : base(Nombre, Apellidos, SeguroSocial)
+        public decimal sueldoBase { get; set; }
+        public bool metas { get; set; }
+        public DocenteContratoFijo(string Nombre, string Apellidos, string SeguroSocial,decimal SueldoBase, bool Metas) : base(Nombre, Apellidos, SeguroSocial)
         {
+            this.sueldoBase = SueldoBase;
+            this.metas = Metas;
         }
-        public override decimal CalcularSueldo(bool metas,decimal SueldoBase)
+        public override decimal CalcularSueldo()
         {
-            if (metas == true) {
+            if (metas == true)
+            {
 
-                decimal bono = SueldoBase * 10/100;
-                decimal Sueldo = SueldoBase + bono;
+                decimal bono = sueldoBase * 10 / 100;
+                decimal Sueldo = sueldoBase + bono;
                 return Sueldo;
             }
-            else { return SueldoBase / 2; }
+            else { return sueldoBase / 2; }
         }
     }
 }

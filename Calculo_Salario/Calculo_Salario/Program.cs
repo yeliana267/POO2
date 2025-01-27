@@ -6,15 +6,14 @@ namespace Calculo_Salario
     {
         static void Main(string[] args)
         {
-            DocenteContratoFijo docenteFijo = new DocenteContratoFijo("Juan", "Perez", "SS12345");
-            DocentePorHoras docentePorHoras = new DocentePorHoras("Maria", "Gomez", "SS67890") { HorasTrabajadas = 40 };
-            DocentePorHoras yeliana = new DocentePorHoras("Yeliana", "Bencosme", "SS678934") { HorasTrabajadas = 80 };
+            DocenteContratoFijo Alvely = new DocenteContratoFijo("Alvely", "Perez", "SS12345",50000,false);
+            Console.WriteLine($"{Alvely.nombre} {Alvely.apellidos} de seguro social: {Alvely.SeguroSocial} a ganado {Alvely.CalcularSueldo()}");
 
-            Empleado_Admin administrativo = new Empleado_Admin("Carlos", "Lopez", "SS11223");
+            DocentePorHoras yeliana = new DocentePorHoras("Yeliana", "Diaz", "SS67890", 60);
+            Console.WriteLine($"{yeliana.nombre} {yeliana.apellidos} de seguro social: {yeliana.SeguroSocial} a ganado {yeliana.CalcularSueldo()}");
 
-            Console.WriteLine("Salario Docente Fijo con metas alcanzadas: " + docenteFijo.nombre + " " + docenteFijo.apellidos + " " + docenteFijo.SeguroSocial + " " + docenteFijo.CalcularSueldo(true, 45000));
-            Console.WriteLine($"{yeliana.nombre} { yeliana.apellidos} de seguro social: {yeliana.SeguroSocial} a ganado {yeliana.CalcularSueldo(true)}");
-
+            Empleado_Admin juana = new  Empleado_Admin("Juana", "Paredes", "SS12567", true);
+            Console.WriteLine($"{juana.nombre} {juana.apellidos} de seguro social: {juana.SeguroSocial} a ganado {juana.CalcularSueldo()}");
 
             Console.ReadLine();
         }
