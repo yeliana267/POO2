@@ -26,9 +26,9 @@ namespace Calculo_Salario
                 return seguroSocial;
             }
             set
-            { SeguroSocial = value; }
+            { seguroSocial = value; }
         }
-        public abstract decimal CalcularSueldo();
+        public abstract decimal CalcularSueldo(decimal SueldoBase);
     }
 
 

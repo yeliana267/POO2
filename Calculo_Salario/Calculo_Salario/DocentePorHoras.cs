@@ -10,12 +10,11 @@ namespace Calculo_Salario
 
     {
         public int horasTrabajadas { get; set; }
-        public decimal tarifaHoras = 800;
         public DocentePorHoras(string Nombre, string Apellidos, string SeguroSocial, int HorasTrabajadas) : base(Nombre, Apellidos, SeguroSocial)
         {
             this.horasTrabajadas = HorasTrabajadas;
         }
-        public override decimal CalcularSueldo()
+        public override decimal CalcularSueldo(decimal tarifaHoras = 800)
         {
 
             decimal Sueldo = tarifaHoras * horasTrabajadas;
