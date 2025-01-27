@@ -12,7 +12,7 @@ namespace Calculo_Salario
         public DocenteContratoFijo(string Nombre, string Apellidos, string SeguroSocial) : base(Nombre, Apellidos, SeguroSocial)
         {
         }
-        public override decimal CalcularSueldo(bool metas, decimal SueldoBase)
+        public override decimal CalcularSueldo(bool metas,decimal SueldoBase)
         {
             if (metas == true) {
 
