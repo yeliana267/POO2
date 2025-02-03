@@ -8,5 +8,10 @@ namespace NotificationService
 {
     public class LoggerService
     {
+        public void Log(string message)
+        {
+            Console.WriteLine($"Notificación registrada en logs: {message}");
+        }
+
     }
 }
