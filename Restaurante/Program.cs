@@ -10,7 +10,7 @@ namespace Restaurante
     {
         static void Main(string[] args)
         {
-            Console.Write("Ingrese los precios de los platos (separados por comas): ");
+            Console.Write("Ingrese los precios de los platos (100,100,100): ");
             string entradaPrecios = Console.ReadLine();
 
             decimal[] precios = entradaPrecios
@@ -18,7 +18,7 @@ namespace Restaurante
                 .Select(p => decimal.TryParse(p, out decimal valor) ? valor : 0)
                 .ToArray();
 
-            Console.Write("¿Desea agregar una propina personalizada? (s/n): ");
+            Console.Write("¿Desea agregar una propina personalizada? (S/N): ");
             string respuestaPropina = Console.ReadLine();
 
             decimal? propina = null;
