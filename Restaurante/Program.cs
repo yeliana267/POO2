@@ -10,6 +10,8 @@ namespace Restaurante
     {
         static void Main(string[] args)
         {
+            Calculo cliente = new Calculo();
+
         }
     }
 }
