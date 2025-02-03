@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace Restaurante
 {
-    internal class Calculo
+       public class Calculo
     {
+        private decimal Propina = 0.10M;
+
+        public decimal propina
+        {
+            get { return Propina; }
+            set { Propina = value; }
+        }
+
+
+
     }
 }
